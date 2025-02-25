@@ -6,4 +6,7 @@ Tooltip_EN = {
     Tooltip_CD8MG = "A weak opiate painkiller mixed with acetaminophen, good for small aches and pains. box reads "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
     Tooltip_CD15MG = "A Stronger dosage of Codeine mixed with acetaminophen, More suited for intense pain. "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
     Tooltip_CD30MG = "The strongest variant of Codeine available in Knox County, Suited for Untolerable Pain. "CAUTION: Do Not Exceed 8 in any 24 hour period - May Cause Addiction"",
+
+    Tooltip_Naloxone = "The Reversal Agent for Opiate Overdose" 
+
 }

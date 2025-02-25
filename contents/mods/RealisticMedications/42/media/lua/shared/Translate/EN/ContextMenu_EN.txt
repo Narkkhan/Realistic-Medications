@@ -5,9 +5,25 @@ ContextMenu_EN = {
 
 	ContextMenu_CD_Small = "Take 1 8mg/500mg Codeine Tablet",
 	ContextMenu_CD_Medium = "Take 1 15mg/500mg Codeine Tablet",
-	Context_CD_Large = "Take 1 30mg/500mg Codeine Tablet",
+	ContextMenu_CD_Large = "Take 1 30mg/500mg Codeine Tablet",
 
-	Context_APAP_Placeholder = "Test APAP Placeholder 1",
-	Context_APAP_Placeholder_2 = "Test APAP Placeholder 2",
-	Context_APAP_Placeholder_3 = "Test AP
+	ContextMenu_APAP_Placeholder = "Test APAP Placeholder 1",
+	ContextMenu_APAP_Placeholder_2 = "Test APAP Placeholder 2",
+	ContextMenu_APAP_Placeholder_3 = "Test APAP Placeholder 3",
+
+	ContextMenu_BNZO_Placeholder = "Test BNZO Placeholder 1",
+	ContextMenu_BNZO_Placeholder_2 = "Test BNZO Placeholder 2",
+	ContextMenu_BNZO_Placeholder_3 = "Test BNZO Placeholder 3",
+
+	ContextMenu_BetaBlocker_Placeholder = "Test BB Placeholder 1",
+	ContextMenu_BetaBlocker_Placeholder_2 = "Test BB Placeholder 2",
+	ContextMenu_BetaBlocker_Placeholder_3 = "Test BB Placeholder 3",
+
+	ContextMenu_NSAIDS_Placeholder = "Test NSAIDS Placeholder 1",
+	ContextMenu_NSAIDS_Placeholder_2 = "Test NSAIDS Placeholder 2",
+	ContextMenu_NSAIDS_Placeholder_3 = "Test NSAIDS Placeholder 3",
+
+	ContextMenu_Naloxone_Placeholder = "Test Naloxone - Ruin the High"
+
+
 }

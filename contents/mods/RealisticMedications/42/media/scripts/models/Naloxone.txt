@@ -1,0 +1,31 @@
+module RealisticMedications
+{
+	imports
+	{
+		Base
+	}
+
+
+    item NaloxoneIN 
+    {
+        DisplayName = Naloxone Hydrochloride,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Icon = PillsPainkillers,
+		CantBeFrozen = TRUE,
+		Type = Drainable,
+		UseDelta = 0.2,
+		CustomContextMenu = Naloxone_Placeholder,
+		Medical = TRUE,,
+		Tooltip = Naloxone,
+		ThirstChange = +50,
+		FatigueChange = 5,
+		WorldStaticModel = PillsPainkiller,
+		customEatSound = Pill_Swallowing,
+		EatTime = 100,
+		tags = pills,
+		
+    }
+}
+
+
