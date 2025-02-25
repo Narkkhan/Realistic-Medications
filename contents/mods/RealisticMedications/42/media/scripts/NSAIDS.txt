@@ -1,0 +1,8 @@
+module RealisticMedications
+{
+	imports
+	{
+		Base
+	}
+
+}
