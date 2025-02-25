@@ -1,0 +1,71 @@
+module RealisticMedications
+{
+	imports
+	{
+		Base
+	}
+	
+
+	item Codeine8mg_500mg
+	{
+		DisplayName = Codeine 8mg/500mg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Icon = PillsPainkiller,
+		CantBeFrozen = TRUE,
+		Type = Drainable,
+		UseDelta = 0.2,
+		CustomContextMenu = CD_Small,
+		Medical = TRUE,
+		ThirstChange = +5,
+		Tooltip = CD8MG,
+		WorldStaticModel = PillsPainkiller,
+		customEatSound = Pill_Swallowing,
+		EatTime = 100,
+		tags = pills,
+		FatigueChange = 5,
+
+		
+	}
+
+	item Codeine15mg_500mg
+	{
+		DisplayName = Codeine 15mg/500mg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Icon = PillsPainkiller,
+		Type = Drainable,
+		UseDelta = 0.25,
+		CantBeFrozen = TRUE,
+		CustomContextMenu = CD_Medium,
+		Medical = TRUE,
+		ThirstChange = +10,
+		Tooltip = CD15MG,
+		WorldStaticModel = Painkillers,
+		CustomEatSound = Pill_Swallowing,
+		EatTime = 150,
+		tags = pills,
+		FatigueChange = 15,
+	}
+
+	item Codeine30mg_500mg
+	{
+		DisplayName = Codeine 30mg/500mg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Icon = PillsPainkiller,
+		Type = Drainable,
+		UseDelta = 0.25,
+		CantBeFrozen = TRUE,
+		CustomContextMenu = CD_Large,
+		Medical = TRUE,
+		ThirstChange = +25,
+		Tooltip = CD30MG,
+		WorldStaticModel = Painkillers,
+		CustomEatSound = Pill_Swallowing,
+		EatTime = 150,
+		tags = pills,
+		FatigueChange = 30,
+	}
+
+}

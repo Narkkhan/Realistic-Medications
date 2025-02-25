@@ -1,0 +1,9 @@
+ContextMenu_EN = {
+	ContextMenu_AMX_Small = "Take Amoxicillin 250mg Orally",
+	ContextMenu_AMX_Medium = "Take Amoxicillin 500mg Orally",
+	ContextMenu_AMX_Large = "Take Amoxicillin 1000mg Orally", 
+
+	ContextMenu_CD_Small = "Take 1 8mg/500mg Codeine Tablet."
+	ContextMenu_CD_Medium = "Take 1 15mg/500mg Codeine Tablet."
+	Context_CD_Large = "Take 1 30mg/500mg Codeine Tablet."
+}

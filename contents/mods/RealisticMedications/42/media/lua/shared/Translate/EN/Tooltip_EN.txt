@@ -1,0 +1,9 @@
+Tooltip_EN = {
+    Tooltip_AMX1000mg = "The Strongest Dose of the Generic penicillin-derived broad spectrum antibiotic in Knox County, commonly prescribed for bacterial infections, Box Reads "CAUTION: Do not take if allergic to penicillin"",
+    Tooltip_AMX500mg = "A Stronger Dose of the Generic penicillin-derived broad spectrum antibiotic, commonly prescribed for bacterial infections, Box Reads "CAUTION: Do not take if allergic to penicillin"",
+    Tooltip_AMX250mg = "A Weaker Dose of the Generic penicillin-derived broad spectrum antibiotic, commonly prescribed for bacterial infections, Box Reads "CAUTION: Do not take if allergic to penicillin"",
+	
+    Tooltip_CD8MG = "A weak opiate painkiller mixed with acetaminophen, good for small aches and pains. box reads "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
+    Tooltip_CD15MG = "A Stronger dosage of Codeine mixed with acetaminophen, More suited for intense pain. "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
+    Tooltip_CD30MG = "The strongest variant of Codeine available in Knox County, Suited for Untolerable Pain. "CAUTION: Do Not Exceed 8 in any 24 hour period - May Cause Addiction"",
+}

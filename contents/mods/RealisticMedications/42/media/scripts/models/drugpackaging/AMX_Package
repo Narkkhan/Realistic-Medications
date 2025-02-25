@@ -1,0 +1,8 @@
+module Base {
+    model Amoxicillin500mg
+    {
+        mesh = WorldItems/drugpackages/Amoxicillin500mg,
+        texture = uv/druglabels/Amoxicllin500mg,
+    }
+
+}
