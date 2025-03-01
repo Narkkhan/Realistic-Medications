@@ -21,6 +21,7 @@ module RealisticMedications
 		ThirstChange = +50,
 		FatigueChange = 5,
 		WorldStaticModel = PillsPainkiller,
+		Reduce
 		customEatSound = Pill_Swallowing,
 		EatTime = 100,
 		tags = pills,

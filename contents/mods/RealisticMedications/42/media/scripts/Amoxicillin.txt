@@ -26,7 +26,8 @@ module RealisticMedications
 		EatTime = 100,
 		tags = pills,
 		FatigueChange = 5,
-
+		Poison = 30,
+		poisonPower = 1,
 		
 	}
 

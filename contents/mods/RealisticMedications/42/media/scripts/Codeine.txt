@@ -13,17 +13,20 @@ module RealisticMedications
 		Weight = 0.1,
 		Icon = PillsPainkiller,
 		CantBeFrozen = TRUE,
-		Type = Drainable,
+		Type = Food,
 		UseDelta = 0.2,
 		CustomContextMenu = CD_Small,
 		Medical = TRUE,
-		ThirstChange = +5,
 		Tooltip = CD8MG,
 		WorldStaticModel = PillsPainkiller,
 		customEatSound = Pill_Swallowing,
 		EatTime = 100,
 		tags = pills,
+		OnEat = OnEat_CodeineConsumptionFunc,
 		FatigueChange = 5,
+		ThirstChange = 5,
+		
+		
 
 		
 	}
@@ -54,8 +57,10 @@ module RealisticMedications
 		DisplayCategory = FirstAid,
 		Weight = 0.1,
 		Icon = PillsPainkiller,
+		FatigueChange = 100,
 		Type = Drainable,
 		UseDelta = 0.25,
+		
 		CantBeFrozen = TRUE,
 		CustomContextMenu = CD_Large,
 		Medical = TRUE,
@@ -65,7 +70,6 @@ module RealisticMedications
 		CustomEatSound = Pill_Swallowing,
 		EatTime = 150,
 		tags = pills,
-		FatigueChange = 30,
 	}
 
 }
