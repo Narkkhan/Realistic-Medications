@@ -128,4 +128,6 @@ function PillElimination()
     end
 end
 
+
 Events.EveryHours.Add(PillElimination)
+

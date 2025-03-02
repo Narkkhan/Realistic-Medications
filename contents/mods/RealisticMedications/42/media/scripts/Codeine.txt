@@ -17,10 +17,10 @@ module RealisticMedications
 		UseDelta = 0.2,
 		CustomContextMenu = CD_Small,
 		Medical = TRUE,
-		Tooltip = CD8MG,
+		Tooltip = A weak opiate painkiller mixed with acetaminophen good for small aches and pains,
 		WorldStaticModel = PillsPainkiller,
 		customEatSound = Pill_Swallowing,
-		EatTime = 100,
+		EatTime = 240,
 		tags = pills,
 		OnEat = CodeineConsumptionFunc,
 		FatigueChange = 5,
@@ -37,8 +37,7 @@ module RealisticMedications
 		DisplayCategory = FirstAid,
 		Weight = 0.1,
 		Icon = PillsPainkiller,
-		Type = Drainable,
-		UseDelta = 0.25,
+		Type = Food,
 		CantBeFrozen = TRUE,
 		CustomContextMenu = CD_Medium,
 		Medical = TRUE,
@@ -46,7 +45,8 @@ module RealisticMedications
 		Tooltip = CD15MG,
 		WorldStaticModel = Painkillers,
 		CustomEatSound = Pill_Swallowing,
-		EatTime = 150,
+		OnEat = CodeineConsumptionFunc,
+		EatTime = 240,
 		tags = pills,
 		FatigueChange = 15,
 	}
@@ -58,7 +58,7 @@ module RealisticMedications
 		Weight = 0.1,
 		Icon = PillsPainkiller,
 		FatigueChange = 100,
-		Type = Drainable,
+		Type = Food,
 		UseDelta = 0.25,
 		
 		CantBeFrozen = TRUE,
@@ -71,5 +71,19 @@ module RealisticMedications
 		EatTime = 150,
 		tags = pills,
 	}
+
+	item Codeine_8mg_500mg_Bottle
+	{
+	DisplayName = Bottle of Codeine 8/500mg,
+	DisplayCategory = FirstAid,
+	Weight = 1,
+	Type = Food,
+	Icon = VitaminBottle,
+	CantBeFrozen = TRUE,
+	WorldStaticModel = VitaminBottle,
+	Tooltip = A Prescription Bottle of 10 Codeine Tablets - CAUTION Do not Exceed 8 in any 24 hour period - May Cause Addiction,
+	
+	}
+
 
 }

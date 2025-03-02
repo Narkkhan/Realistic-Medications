@@ -1,0 +1,24 @@
+module Base
+module RealisticMedications
+    imports
+    {
+        Base
+    }
+{
+    craftRecipe OpenBottleof8_500mgCodeinePills
+        {
+        timedAction = OpenAmmobox,
+        Time = 5,
+        OnCreate = Recipe.OnCreate.OpenCodeinePills,
+        Tags = InHandCraft;CanBeDoneInDark,
+        category = Miscellaneous,
+        inputs
+        {
+            item 1 [RealisticMedications.Codeine_8mg_500mg_Bottle] flags[AllowinDark],
+        }
+        outputs
+        {
+            item 10 RealisticMedications.Codeine8mg_500mg,
+        }
+        }
+}
