@@ -33,7 +33,7 @@ function CodeineConsumptionFunc(item, character, amount)
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
     elseif pillsEaten > 5 and mdata.CodeinePillsConsumed < 8 then
         player:Say("I Feel Sick, I should Stop")
-        player_bd:setFoodSicknessLevel(20)
+        player_bd:setFoodSicknessLevel(30)
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
     elseif pillsEaten <= 8 then
         print("player has consumed AT LEAST 8 pills")
@@ -60,21 +60,40 @@ function CodeineConsumptionFunc(item, character, amount)
         player_stats:setThirst(100)
         player_stats:setPain(100)
         player_stats:setFatigue(100)
+        player_bd:getBodyPart(BodyPartType.Torso_Upper):SetHealth(25)
+        player_bd:getBodyPart(BodyPartType.Torso_Lower):SetHealth(45)
+
+        --stages after this are considered the endgame stages
+        --players are intentionally at the point of taking pills, and the messages are to try and emulate the characters mindset 
+        --They are going to die if they continue to take the pills beyond this point if the continue their behaviour, we are trying to implore them to stop and think, alongside show the severity of their actions
+        
     elseif pillsEaten <= 16 then
+        player:Say("I'm sorry, I'm so sorry")
+        player:Say("*Muffled Crying*") 
         
     elseif pillsEaten <= 17 then
+        player:Say("I don't want to go alone...")
+    
+    elseif pillsEaten <=18 then 
+        player:Say("Not long left now...")
+        player:Say("*sniffling*")
 
+    elseif pillsEaten <=19 then
+        player:Say("Mom, Dad, I love you")
+        player:Say("*Muffled Crying*")
 
     elseif pillsEaten >=20 then
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         player:Say("*Gurgling Sounds*")
         player_bd:setOverallBodyHealth(0)
 
+        --Final stage of the codeine overdose, the player dies. 
+
     elseif pillsEaten <=100 then
         player:Say("I have taken "..mdata.CodeinePillsConsumed.." pills")
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
 
-        -- Kill the player instantly at this point LOL
+        -- Kill the player instantly at this point 
         -- Here means they've eaten far too many. More than 15 to be exact!
         
     end
@@ -103,6 +122,8 @@ function PillElimination()
             player:Say("I think I might make it through this...")
         elseif mdata.CodeinePillsConsumed <= 15 then
             player:Say("The worst is over, I think")
+        elseif mdata.CodeinePillsConsumed <= 18 then
+            player:Say("I want to live... I need to push on...")
         end
     end
 end
