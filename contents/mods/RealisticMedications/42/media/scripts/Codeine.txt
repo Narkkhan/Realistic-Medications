@@ -22,7 +22,7 @@ module RealisticMedications
 		customEatSound = Pill_Swallowing,
 		EatTime = 100,
 		tags = pills,
-		OnEat = OnEat_CodeineConsumptionFunc,
+		OnEat = CodeineConsumptionFunc,
 		FatigueChange = 5,
 		ThirstChange = 5,
 		
