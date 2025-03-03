@@ -1,3 +1,7 @@
+--- This is the file that will be used to handle the consumption of the Codeine Pills and the side effects for now.
+--- This will be expanded upon in the future to include other medications and their effects.
+
+
 
 --- @type Item_OnEat
 function CodeineConsumptionFunc(item, character, amount)
@@ -86,6 +90,7 @@ function CodeineConsumptionFunc(item, character, amount)
         
     end
 
+    
 
 end
 
