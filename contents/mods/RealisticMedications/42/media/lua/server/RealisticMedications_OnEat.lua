@@ -1,17 +1,11 @@
 
 --- @type Item_OnEat
 function CodeineConsumptionFunc(item, character, amount)
-    -- Use the character that ate the pills instead of getPlayer() here!
-    local player = character
-    -- Getting the player's mod data
-    local mdata = player:getModData()
-    local player_stats = player:getStats()
-    local player_bd = player:getBodyDamage()
-    local player_bh = player_bd:getOverallBodyHealth()
-    
-
-
-    -- Increment the codeine consumed.
+    local player = character -- Use the character that ate the pills 
+    local mdata = player:getModData() -- Get the mod data for the player
+    local player_stats = player:getStats() -- Get the Players Statistics to enable them to be manipulated later
+    local player_bd = player:getBodyDamage() -- Get the players body damage to enable them to be manipulated later
+    local player_bh = player_bd:getOverallBodyHealth() -- Obtains the players overall body health to enable it to be manipulated later
     
     -- This "or 0" is required because initially, the variable will be nil (non-existent) so you
     -- have to set it to a default value. Basically "true or 0" will return true, and "false or 0" will return 0.
@@ -23,9 +17,10 @@ function CodeineConsumptionFunc(item, character, amount)
     -- Also, we have to reverse the if tree, because >= 1 will ALWAYS return true, even if they've eaten 1000000 and should theoretically die!!! If else will then skip the rest of the tree and go right to "end".
     -- So you could put >= 15 at the top adn then >= 1 at the bottom, but I prefer to invert the statement, so
     -- it is LESS THAN which works just as well.
-    if pillsEaten <= 1 then
+    
+    if pillsEaten <= 10 then
         player:Say("I feel a little better")
-        player_bd:setPainReduction(20)
+        player_bd:setPainReduction(1500)
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         print("Player Current Body health is "..player_bh )
     elseif pillsEaten <= 5 then
@@ -53,13 +48,6 @@ function CodeineConsumptionFunc(item, character, amount)
     elseif pillsEaten <= 15 then
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         player:Say("I can't stay awake...")
-        player_bd:setUnhappynessLevel(100)
-        player_stats:setEndurance(0)
-        player_stats:setPanic(100)
-        player_stats:setStress(100)
-        player_stats:setThirst(100)
-        player_stats:setPain(100)
-        player_stats:setFatigue(100)
         player_bd:getBodyPart(BodyPartType.Torso_Upper):SetHealth(25)
         player_bd:getBodyPart(BodyPartType.Torso_Lower):SetHealth(45)
 
@@ -97,7 +85,8 @@ function CodeineConsumptionFunc(item, character, amount)
         -- Here means they've eaten far too many. More than 15 to be exact!
         
     end
-    
+
+
 end
 
 
@@ -107,7 +96,6 @@ function PillElimination()
     local mdata = player:getModData()
     local timeofday = getGameTime():getTimeOfDay()
     
-
     if mdata.CodeinePillsConsumed and mdata.CodeinePillsConsumed > 0 then
         -- Have some effects here that get applied every minute the codeine is active
         mdata.CodieneDegradation = mdata.CodeinePillsConsumed -1
@@ -128,6 +116,4 @@ function PillElimination()
     end
 end
 
-
 Events.EveryHours.Add(PillElimination)
-

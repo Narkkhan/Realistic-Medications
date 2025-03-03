@@ -23,8 +23,8 @@ module RealisticMedications
 		EatTime = 240,
 		tags = pills,
 		OnEat = CodeineConsumptionFunc,
-		FatigueChange = 5,
-		ThirstChange = 5,
+		
+		
 		
 		
 
