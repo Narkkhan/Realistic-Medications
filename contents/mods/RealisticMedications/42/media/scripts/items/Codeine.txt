@@ -1,12 +1,11 @@
-module RealisticMedications
-{
+module RealisticMedications {
 	imports
 	{
 		Base
 	}
 	
 
-	item Codeine8mg_500mg
+	item Codeine8mg500mg
 	{
 		DisplayName = Codeine 8mg/500mg,
 		DisplayCategory = FirstAid,
@@ -31,7 +30,7 @@ module RealisticMedications
 		
 	}
 
-	item Codeine15mg_500mg
+	item Codeine15mg500mg
 	{
 		DisplayName = Codeine 15mg/500mg,
 		DisplayCategory = FirstAid,
@@ -51,7 +50,7 @@ module RealisticMedications
 		FatigueChange = 15,
 	}
 
-	item Codeine30mg_500mg
+	item Codeine30mg500mg
 	{
 		DisplayName = Codeine 30mg/500mg,
 		DisplayCategory = FirstAid,
@@ -72,16 +71,45 @@ module RealisticMedications
 		tags = pills,
 	}
 
-	item Codeine_8mg_500mg_Bottle
+	item Codeine8mg500mgbottle
 	{
 	DisplayName = Bottle of Codeine 8/500mg,
 	DisplayCategory = FirstAid,
 	Weight = 1,
-	Type = Food,
+	Type = Normal,
 	Icon = VitaminBottle,
+	OnCreate = OpenCodeinePills8mg
 	CantBeFrozen = TRUE,
 	WorldStaticModel = VitaminBottle,
-	Tooltip = A Prescription Bottle of 10 Codeine Tablets - CAUTION Do not Exceed 8 in any 24 hour period - May Cause Addiction,
+	Tooltip = A Prescription Bottle of 10 Codeine Tablets  CAUTION Do not Exceed 8 in any 24 hour period  May Cause Addiction,
+	
+	}
+
+	item Codeine15mg500mgbottle
+	{
+	DisplayName = Bottle of Codeine 8/500mg,
+	DisplayCategory = FirstAid,
+	Weight = 1,
+	Type = Normal,
+	Icon = VitaminBottle,
+	OnCreate = OpenCodeinePills8mg
+	CantBeFrozen = TRUE,
+	WorldStaticModel = VitaminBottle,
+	Tooltip = A Prescription Bottle of 10 Codeine Tablets  CAUTION Do not Exceed 8 in any 24 hour period  May Cause Addiction,
+	
+	}
+
+	item Codeine30mg500mgbottle
+	{
+	DisplayName = Bottle of Codeine 8/500mg,
+	DisplayCategory = FirstAid,
+	Weight = 1,
+	Type = Normal,
+	Icon = VitaminBottle,
+	OnCreate = OpenCodeinePills8mg
+	CantBeFrozen = TRUE,
+	WorldStaticModel = VitaminBottle,
+	Tooltip = A Prescription Bottle of 10 Codeine Tablets  CAUTION Do not Exceed 8 in any 24 hour period  May Cause Addiction,
 	
 	}
 

@@ -60,6 +60,7 @@ function CodeineConsumptionFunc(item, character, amount)
         --They are going to die if they continue to take the pills beyond this point if the continue their behaviour, we are trying to implore them to stop and think, alongside show the severity of their actions
         
     elseif codeinepillsEaten <= 16 then
+        player:playSound("DeathComingSoon")
         player:Say("I'm sorry, I'm so sorry")
         player:Say("*Muffled Crying*") 
         

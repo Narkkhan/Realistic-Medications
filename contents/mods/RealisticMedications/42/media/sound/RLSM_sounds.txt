@@ -1,0 +1,20 @@
+module RealisticMedications{
+
+
+
+    sound DeathComingSoon{
+        category = object,
+        loop = false,
+        is3D = true,
+        clip {
+            file = media/sound/DeathComingSoon.ogg",
+            distanceMin = 1,
+            distanceMax = 30,
+            reverbFactor = 0.4,
+            volume = 0.7,
+
+        }
+    
+    }
+}
+

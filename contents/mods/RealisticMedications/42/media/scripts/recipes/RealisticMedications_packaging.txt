@@ -1,0 +1,27 @@
+module RealisticMedications {
+    imports {
+        Base
+    }
+
+
+    craftRecipe Open Prescription Bottle of Codeine8mg500mg
+        {
+            time        = 100,
+            category = Miscellaneous,
+            tags = InHandCraft;Packing;CanBeDoneInDark,
+            timedAction = Making,
+            inputs
+            {
+                item 1 [RealisticMedications.Codeine8mg500mgbottle] mappers[PillMapper] flags[Prop1],
+            }
+            outputs
+            {
+                item 10 mapper:PillMapper,
+            }   
+            itemMapper PillMapper
+            {
+                RealisticMedications.Codeine8mg500mg = RealisticMedications.Codeine8mg500mgbottle,
+                
+            }
+        }
+}

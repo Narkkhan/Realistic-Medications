@@ -8,5 +8,6 @@ Tooltip_EN = {
     Tooltip_CD30MG = "The strongest variant of Codeine available in Knox County, Suited for Untolerable Pain. "CAUTION: Do Not Exceed 8 in any 24 hour period - May Cause Addiction"",
 
     Tooltip_Naloxone = "The Reversal Agent for Opiate Overdose" 
+    Tooltip_Recipe_CodeineBottle8MG = "This is a descriptio of my recipe"
 
 }
