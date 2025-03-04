@@ -5,5 +5,88 @@ module RealisticMedications
 		Base
 	}
 
-}
+		item Acetaminophen325MGOralCapsule
+		{
+			DisplayName = Acetaminophen 325MG Oral Capsule,
+			DisplayCategory = FirstAid,
+			Type = Food,
+			Weight = 0.1,
+			Icon = PillsBetablocker,
+			OnEat = BenzoConsumption,
+			customEatSound = Pill_Swallowing,
+			Medical = TRUE,
+			eatTime = 240,
+			Tooltip = Tooltip_BNZO_Small,
+			UseDelta = 0.1,
+			UseWhileEquipped = TRUE,
+			CustomContextMenu = ,
+			StaticModel = PillBottle,
+			WorldStaticModel = PillBottleGround,
+			Tags = Pills,
 
+	}
+
+	item Acetaminophen500MGOralCapsule
+	{
+		DisplayName = Acetaminophen 500MG Oral Capsule,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+
+	}
+
+	item Acetaminophen325MGOralTablet
+	{
+		DisplayName = Acetaminophen 325MG Oral Tablet,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+
+	}
+
+	item Acetaminophen500MGOralTablet
+	{
+		DisplayName = Acetaminophen 325MG Oral Tablet,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+
+	}
+
+}

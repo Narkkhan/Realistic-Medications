@@ -6,3 +6,70 @@ module RealisticMedications
 	}
 
 }
+
+	item Propanolol20MGTablet
+	{
+
+
+		DisplayName = Propanolol 20MG Tablet,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+
+	}
+
+
+	item Propanolol40MGTablet
+	{
+		DisplayName = Propanolol 40MG Tablet,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+
+	}
+
+	item Propanolol60MGTablet
+	{
+		DisplayName = Acetaminophen 325MG Oral Capsule,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+
+	}
+}

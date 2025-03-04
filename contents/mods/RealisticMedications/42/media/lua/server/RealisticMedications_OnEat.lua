@@ -14,20 +14,28 @@ function CodeineConsumptionFunc(item, character, amount)
     -- This "or 0" is required because initially, the variable will be nil (non-existent) so you
     -- have to set it to a default value. Basically "true or 0" will return true, and "false or 0" will return 0.
     mdata.CodeinePillsConsumed = (mdata.CodeinePillsConsumed or 0) + 1
+    mdata.PillSpeechCounter = (mdata.PillSpeechCounter or 0) + 2
    
     local codeinepillsEaten = mdata.CodeinePillsConsumed -- set this once we've verified it cant be null and retrieved the value!
-
+    local pillSpeechCounter = mdata.PillSpeechCounter
     -- Change this to else if, because otherwise it will always return true!
     -- Also, we have to reverse the if tree, because >= 1 will ALWAYS return true, even if they've eaten 1000000 and should theoretically die!!! If else will then skip the rest of the tree and go right to "end".
     -- So you could put >= 15 at the top adn then >= 1 at the bottom, but I prefer to invert the statement, so
     -- it is LESS THAN which works just as well.
     
     if codeinepillsEaten <= 1 then
-        player:Say("I feel a little better")
+         if pillSpeechCounter <= 1 and codeinepillsEaten == 1 then 
+            player:Say("I feel a little better")
+            print(pillSpeechCounter)
+         end
         player_bd:setPainReduction(1500)
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         print("Player Current Body health is "..player_bh )
     elseif codeinepillsEaten <= 5 then
+          if codeinepillsEaten <=5 and pillSpeechCounter <=5 then 
+            player:Say("I feel a little sick")
+            print(pillSpeechCounter)
+          end
         player_bd:setFoodSicknessLevel(20)
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
     elseif codeinepillsEaten > 5 and mdata.CodeinePillsConsumed < 8 then
@@ -61,6 +69,7 @@ function CodeineConsumptionFunc(item, character, amount)
         
     elseif codeinepillsEaten <= 16 then
         player:playSound("DeathComingSoon")
+        player:playSound("bojack")
         player:Say("I'm sorry, I'm so sorry")
         player:Say("*Muffled Crying*") 
         
@@ -121,6 +130,16 @@ function BenzoConsumption(item, character, amount)
     
 end
 
+function SpeechCancellation()
+    local player = getPlayer()
+    local mdata = player:getModData()
+    local timeofday = getGameTime():getTimeOfDay()
+    if mdata.PillSpeechCounter and mdata.PillSpeechCounter > 0 then
+        mdata.PillSpeechCounter = mdata.PillSpeechCounter -1
+        print("Current Time is "..timeofday)
+        print("Speech Counter has decreased to "..mdata.PillSpeechCounter)
+    end
+end
 
 
 function PillElimination()
@@ -165,5 +184,5 @@ function PillElimination()
         end
     end
 end
-
+Events.EveryTenMinutes.Add(SpeechCancellation)
 Events.EveryHours.Add(PillElimination)

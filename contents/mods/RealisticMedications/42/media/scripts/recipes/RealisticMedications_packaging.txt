@@ -4,10 +4,10 @@ module RealisticMedications {
     }
 
 
-    craftRecipe Open Prescription Bottle of Codeine8mg500mg
+    craftRecipe Open Prescription Bottle of Codeine8mg 500mg
         {
             time        = 100,
-            category = Miscellaneous,
+            category = Realistic Medications,
             tags = InHandCraft;Packing;CanBeDoneInDark,
             timedAction = Making,
             inputs
@@ -24,4 +24,108 @@ module RealisticMedications {
                 
             }
         }
+
+        craftRecipe Open Prescription Bottle of Codeine15mg/500mg
+        {
+            time        = 100,
+            category = Realistic Medications,
+            tags = InHandCraft;Packing;CanBeDoneInDark,
+            timedAction = Making,
+            inputs
+            {
+                item 1 [RealisticMedications.Codeine15mg500mgbottle] mappers[PillMapper] flags[Prop1],
+            }
+            outputs
+            {
+                item 10 mapper:PillMapper,
+            }   
+            itemMapper PillMapper
+            {
+                RealisticMedications.Codeine15mg500mg = RealisticMedications.Codeine15mg500mgbottle,
+                
+            }
+        }
+
+        craftRecipe Open Prescription Bottle of Codeine30mg/500mg
+        {
+            time = 100,
+            category = Realistic Medications,
+            tags = InHandCraft;Packing;CanBeDoneInDark,
+            timedAction = Making,
+            inputs
+            {
+                item 1 [RealisticMedications.Codeine30mg500mgbottle] mappers[PillMapper] flags[Prop1],
+            }
+            outputs
+            {
+                item 10 mapper:PillMapper,
+            }   
+            itemMapper PillMapper
+            {
+                RealisticMedications.Codeine30mg500mg = RealisticMedications.Codeine30mg500mgbottle,
+                
+            }
+        }
+
+        craftRecipe Open Pill Bottle containing Diazepam 2mg
+            {
+                time = 50,
+                category = Realistic Medications,
+                tags = InHandCraft;Packing;CanBeDoneInDark,
+                timedAction = Making,
+                inputs
+                {
+                    item 1 [RealisticMedications.Diazepam2MGContainer] mappers[PillMapper] flags[Prop1],
+                }
+                outputs
+                {
+                    item 10 mapper:PillMapper,
+                }   
+                itemMapper PillMapper
+                {
+                    RealisticMedications.Diazepam2mg = RealisticMedications.Diazepam2MGContainer,
+                    
+                }
+            }
+
+            craftRecipe Open Pill Bottle containing Diazepam 5mg
+                {
+                    time        = 100,
+                    category = Realistic Medications,
+                    tags = InHandCraft;Packing;CanBeDoneInDark,
+                    timedAction = Making,
+                    inputs
+                    {
+                        item 1 [RealisticMedications.Diazepam5MGContainer] mappers[PillMapper] flags[Prop1],
+                    }
+                    outputs
+                    {
+                        item 10 mapper:PillMapper,
+                    }   
+                    itemMapper PillMapper
+                    {
+                        RealisticMedications.Diazepam5mg = RealisticMedications.Diazepam5MGContainer,
+                        
+                    }
+                }
+             craftRecipe Open Pill Bottle containing Diazepam 10mg
+                {
+                    time        = 100,
+                    category = Realistic Medications,
+                    tags = InHandCraft;Packing;CanBeDoneInDark,
+                    timedAction = Making,
+                    inputs
+                    {
+                        item 1 [RealisticMedications.Diazepam10MGContainer] mappers[PillMapper] flags[Prop1],
+                    }
+                    outputs
+                    {
+                        item 10 mapper:PillMapper,
+                    }   
+                    itemMapper PillMapper
+                    {
+                        RealisticMedications.Diazepam10mg = RealisticMedications.Diazepam10MGContainer,
+                        
+                    }
+                }
 }

@@ -6,14 +6,17 @@ ContextMenu_EN = {
 	ContextMenu_CD_Small = "Take 1 8mg/500mg Codeine Tablet",
 	ContextMenu_CD_Medium = "Take 1 15mg/500mg Codeine Tablet",
 	ContextMenu_CD_Large = "Take 1 30mg/500mg Codeine Tablet",
+	ContextMenu_CD_SmallContainer = "Open Prescription Bottle of Codeine8mg/500mg",
+	ContextMenu_CD_MediumContainer = "Open Prescription Bottle of Codeine15mg/500mg",
+	ContextMenu_CD_LargeContainer = "Open Prescription Bottle of Codeine30mg/500mg",
 
 	ContextMenu_APAP_Placeholder = "Test APAP Placeholder 1",
 	ContextMenu_APAP_Placeholder_2 = "Test APAP Placeholder 2",
 	ContextMenu_APAP_Placeholder_3 = "Test APAP Placeholder 3",
 
-	ContextMenu_BNZO_Placeholder = "Test BNZO Placeholder 1",
-	ContextMenu_BNZO_Placeholder_2 = "Test BNZO Placeholder 2",
-	ContextMenu_BNZO_Placeholder_3 = "Test BNZO Placeholder 3",
+	ContextMenu_BNZO_Small = "Take 1 tablet (2mg)",
+	ContextMenu_BNZO_Medium = "Take 1 tablet (5mg)",
+	ContextMenu_BNZO_Large = "Take 1 tablet (10mg)",
 
 	ContextMenu_BetaBlocker_Placeholder = "Test BB Placeholder 1",
 	ContextMenu_BetaBlocker_Placeholder_2 = "Test BB Placeholder 2",

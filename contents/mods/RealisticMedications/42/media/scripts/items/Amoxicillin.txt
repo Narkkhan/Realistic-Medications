@@ -76,4 +76,28 @@ module RealisticMedications
 		
 		
 	}
+
+	item Augmentin875MG125MG
+	{
+		DisplayName = Augmentin 875MG/125MG Tablet,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Type = Food,
+		Icon = Antibiotics,
+		UseDelta = 0.25,
+		CantBeFrozen = TRUE,
+		CustomContextMenu = AMX_Large,
+		Medical = TRUE,
+		ReduceInfectionPower = 100,
+		ThirstChange = 30,
+		HungerChange = 30,
+		Tooltip = Tooltip_AMX1000mg,
+		WorldStaticModel = Amoxicillin500mg,
+		CustomEatSound = Pill_Swallowing,
+		EatTime = 150,
+		tags = pills,
+		FatigueChange = 20,
+		
+		
+	}
 }

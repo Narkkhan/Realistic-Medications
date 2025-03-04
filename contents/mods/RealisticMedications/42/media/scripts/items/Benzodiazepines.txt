@@ -1,0 +1,112 @@
+module RealisticMedications
+{
+	imports
+	{
+		Base
+	}
+
+	item Diazepam2mg
+	{
+		DisplayName = Diazepam 2MG,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Small,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = ,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+	}
+
+	item Diazepam5mg
+	{
+		DisplayName = Diazepam5MG,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Medium,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = BNZO_Medium,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+	}
+
+	item Diazepam10mg
+	{
+		DisplayName = Diazepam 10MG,
+		DisplayCategory = FirstAid,
+		Type = Food,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		OnEat = BenzoConsumption,
+		customEatSound = Pill_Swallowing,
+		Medical = TRUE,
+		eatTime = 240,
+		Tooltip = Tooltip_BNZO_Large,
+		UseDelta = 0.1,
+		UseWhileEquipped = TRUE,
+		CustomContextMenu = BNZO_Large,
+		StaticModel = PillBottle,
+		WorldStaticModel = PillBottleGround,
+		Tags = Pills,
+	}
+
+	item Diazepam2MGContainer
+	{
+	DisplayName = Diazepam 2MG Pill Bottle,
+	DisplayCategory = FirstAid,
+	Weight = 1,
+	Type = Normal,
+	Icon = PillsBetablocker,
+	OnCreate = OpenDiazepam2mg,
+	CantBeFrozen = TRUE,
+	WorldStaticModel = VitaminBottle,
+	Tooltip = Tooltip_BNZO_SmallContainer,
+	
+	}
+
+	item Diazepam5MGContainer
+	{
+	DisplayName = Diazepam 5MG Pill Bottle,
+	DisplayCategory = FirstAid,
+	Weight = 1,
+	Type = Normal,
+	Icon = PillsBetablocker,
+	OnCreate = OpenDiazepam5mg,
+	CustomContextMenu = Open Container,
+	CantBeFrozen = TRUE,
+	WorldStaticModel = VitaminBottle,
+	Tooltip = Tooltip_BNZO_MediumContainer,
+	
+	}
+
+	item Diazepam10MGContainer
+	{
+	DisplayName = Diazepam 10MG Pill Bottle,
+	DisplayCategory = FirstAid,
+	Weight = 1,
+	Type = Normal,
+	Icon = PillsBetablocker,
+	OnCreate = OpenDiazepam10mg,
+	CantBeFrozen = TRUE,
+	WorldStaticModel = VitaminBottle,
+	Tooltip = Tooltip_BNZO_LargeContainer,
+	
+	}
+
+
+}

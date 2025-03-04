@@ -1,4 +1,5 @@
 Tooltip_EN = {
+    
     Tooltip_AMX1000mg = "The Strongest Dose of the Generic penicillin-derived broad spectrum antibiotic in Knox County, commonly prescribed for bacterial infections, Box Reads "CAUTION: Do not take if allergic to penicillin"",
     Tooltip_AMX500mg = "A Stronger Dose of the Generic penicillin-derived broad spectrum antibiotic, commonly prescribed for bacterial infections, Box Reads "CAUTION: Do not take if allergic to penicillin"",
     Tooltip_AMX250mg = "A Weaker Dose of the Generic penicillin-derived broad spectrum antibiotic, commonly prescribed for bacterial infections, Box Reads "CAUTION: Do not take if allergic to penicillin"",
@@ -6,6 +7,14 @@ Tooltip_EN = {
     Tooltip_CD8MG = "A weak opiate painkiller mixed with acetaminophen, good for small aches and pains. box reads "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
     Tooltip_CD15MG = "A Stronger dosage of Codeine mixed with acetaminophen, More suited for intense pain. "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
     Tooltip_CD30MG = "The strongest variant of Codeine available in Knox County, Suited for Untolerable Pain. "CAUTION: Do Not Exceed 8 in any 24 hour period - May Cause Addiction"",
+    
+
+    Tooltip_BNZO_Small = "Take 1 tablet (2mg) by mouth as needed for anxiety, muscle spasms, or seizures, or as directed by your doctor."
+    Tooltip_BNZO_Medium = "Take 1 tablet (5mg) by mouth as needed for anxiety, muscle spasms, or seizures, or as directed by your doctor."
+    Tooltip_BNZO_Large = "Take 1 tablet (10mg) by mouth as needed for anxiety, muscle spasms, or seizures, or as directed by your doctor."
+    Tooltip_BNZO_SmallContainer = "Contains 10 Diazepam 2 mg: For anxiety relief; avoid alcohol and consult your doctor before combining with other medications, Do not exceed 10 tablets in any 24 hour period"
+    Tooltip_BNZO_MediumContainer = "Contains 10 Diazepam 5mg: For anxiety relief; avoid alcohol and consult your doctor before combining with other medications, Do not exceed 5 tablets in any 24 hour period"
+    Tooltip_BNZO_LargeContainer = "Contains 10 Diazepam 10mg: For anxiety relief; avoid alcohol and consult your doctor before combining with other medications, Do not exceed 3 tablets in any 24 hour period"
 
     Tooltip_Naloxone = "The Reversal Agent for Opiate Overdose" 
     Tooltip_Recipe_CodeineBottle8MG = "This is a descriptio of my recipe"

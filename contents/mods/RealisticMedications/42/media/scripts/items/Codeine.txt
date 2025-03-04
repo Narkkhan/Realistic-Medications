@@ -59,7 +59,6 @@ module RealisticMedications {
 		FatigueChange = 100,
 		Type = Food,
 		UseDelta = 0.25,
-		
 		CantBeFrozen = TRUE,
 		CustomContextMenu = CD_Large,
 		Medical = TRUE,
@@ -78,7 +77,8 @@ module RealisticMedications {
 	Weight = 1,
 	Type = Normal,
 	Icon = VitaminBottle,
-	OnCreate = OpenCodeinePills8mg
+	OnCreate = OpenCodeinePills8mg,
+	CustomContextMenu = ContextMenu_CD_SmallContainer,
 	CantBeFrozen = TRUE,
 	WorldStaticModel = VitaminBottle,
 	Tooltip = A Prescription Bottle of 10 Codeine Tablets  CAUTION Do not Exceed 8 in any 24 hour period  May Cause Addiction,
@@ -87,12 +87,13 @@ module RealisticMedications {
 
 	item Codeine15mg500mgbottle
 	{
-	DisplayName = Bottle of Codeine 8/500mg,
+	DisplayName = Bottle of Codeine 15/500mg,
 	DisplayCategory = FirstAid,
 	Weight = 1,
 	Type = Normal,
-	Icon = VitaminBottle,
-	OnCreate = OpenCodeinePills8mg
+	Icon = PillsBetablocker,
+	OnCreate = OpenCodeinePills15mg,
+	CustomContextMenu = ContextMenu_CD_MediumContainer,
 	CantBeFrozen = TRUE,
 	WorldStaticModel = VitaminBottle,
 	Tooltip = A Prescription Bottle of 10 Codeine Tablets  CAUTION Do not Exceed 8 in any 24 hour period  May Cause Addiction,
@@ -101,12 +102,13 @@ module RealisticMedications {
 
 	item Codeine30mg500mgbottle
 	{
-	DisplayName = Bottle of Codeine 8/500mg,
+	DisplayName = Bottle of Codeine 30/500mg,
 	DisplayCategory = FirstAid,
 	Weight = 1,
 	Type = Normal,
-	Icon = VitaminBottle,
-	OnCreate = OpenCodeinePills8mg
+	Icon = PillsBetablocker,
+	OnCreate = OpenCodeinePills30mg,
+	CustomContextMenu = ContextMenu_CD_LargeContainer,
 	CantBeFrozen = TRUE,
 	WorldStaticModel = VitaminBottle,
 	Tooltip = A Prescription Bottle of 10 Codeine Tablets  CAUTION Do not Exceed 8 in any 24 hour period  May Cause Addiction,

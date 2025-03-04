@@ -1,0 +1,102 @@
+module RealisticMedications
+{
+	imports
+	{
+		Base
+	}
+	
+	item Amoxicillin250mg
+	{
+		DisplayName = Oral Amoxicillin 250mg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Icon = Antibiotics,
+		CantBeFrozen = TRUE,
+		Type = Food,
+		UseDelta = 0.2,
+		CustomContextMenu = AMX_Small,
+		Medical = TRUE,
+		ReduceInfectionPower = 20,
+		ThirstChange = 7,
+		HungerChange = 7,
+		Tooltip = Tooltip_AMX250mg,
+		WorldStaticModel = Antibiotics,
+		customEatSound = Pill_Swallowing,
+		EatTime = 100,
+		tags = pills,
+		FatigueChange = 5,
+		Poison = 30,
+		poisonPower = 1,
+		
+	}
+
+	item Amoxicillin500mg
+	{
+		DisplayName = Oral Amoxicillin 500mg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Type = Food,
+		Icon = Antibiotics,
+		UseDelta = 0.25,
+		CantBeFrozen = TRUE,
+		CustomContextMenu = AMX_Medium,
+		Medical = TRUE,
+		ReduceInfectionPower = 50,
+		ThirstChange = 15,
+		HungerChange = 15,
+		Tooltip = Tooltip_AMX500mg,
+		WorldStaticModel = Antibiotics,
+		CustomEatSound = Pill_Swallowing,
+		EatTime = 150,
+		tags = pills,
+		FatigueChange = 10,
+	}
+
+	item Amoxicillin1000mg
+	{
+		DisplayName = Oral Amoxicillin 1000mg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Type = Food,
+		Icon = Antibiotics,
+		UseDelta = 0.25,
+		CantBeFrozen = TRUE,
+		CustomContextMenu = AMX_Large,
+		Medical = TRUE,
+		ReduceInfectionPower = 100,
+		ThirstChange = 30,
+		HungerChange = 30,
+		Tooltip = Tooltip_AMX1000mg,
+		WorldStaticModel = Amoxicillin500mg,
+		CustomEatSound = Pill_Swallowing,
+		EatTime = 150,
+		tags = pills,
+		FatigueChange = 20,
+		
+		
+	}
+
+	item Augmentin875MG125MG
+	{
+		DisplayName = Augmentin 875MG/125MG Tablet,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Type = Food,
+		Icon = Antibiotics,
+		UseDelta = 0.25,
+		CantBeFrozen = TRUE,
+		CustomContextMenu = AMX_Large,
+		Medical = TRUE,
+		ReduceInfectionPower = 100,
+		ThirstChange = 30,
+		HungerChange = 30,
+		Tooltip = Tooltip_AMX1000mg,
+		WorldStaticModel = Amoxicillin500mg,
+		CustomEatSound = Pill_Swallowing,
+		EatTime = 150,
+		tags = pills,
+		FatigueChange = 20,
+    }
+    		
+	
+}
