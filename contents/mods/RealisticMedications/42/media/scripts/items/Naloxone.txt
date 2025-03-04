@@ -1,0 +1,32 @@
+module RealisticMedications {
+	imports
+	{
+		Base
+	}
+	
+    item
+
+    item NaloxoneHydrochlorideIM
+    {
+		DisplayName = Naloxone Hydrochloride IM 400mcg,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+		Icon = PillsBetablocker,
+		CantBeFrozen = TRUE,
+		Type = Food,
+		UseDelta = 0.2,
+		CustomContextMenu = CD_Small,
+		Medical = TRUE,
+		Tooltip = Tooltip_Naloxone,
+		WorldStaticModel = PillsPainkiller,
+		customEatSound = Pill_Swallowing,
+		EatTime = 240,
+		tags = Pills,
+		OnEat = CodeineConsumptionFunc,
+		
+		
+		
+		
+
+		
+	}

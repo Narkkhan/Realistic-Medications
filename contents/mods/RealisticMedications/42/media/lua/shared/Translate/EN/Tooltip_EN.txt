@@ -7,6 +7,9 @@ Tooltip_EN = {
     Tooltip_CD8MG = "A weak opiate painkiller mixed with acetaminophen, good for small aches and pains. box reads "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
     Tooltip_CD15MG = "A Stronger dosage of Codeine mixed with acetaminophen, More suited for intense pain. "CAUTION: Do not Exceed 8 in any 24 hour period - May Cause Addiction"",
     Tooltip_CD30MG = "The strongest variant of Codeine available in Knox County, Suited for Untolerable Pain. "CAUTION: Do Not Exceed 8 in any 24 hour period - May Cause Addiction"",
+    Tooltip_CDContainerSmall = "A Prescription Pill Container with 10 8mg/500mg Codeine Pills, Suitable for treating Toothache, Period Pain, Muscle pains and similar conditions. "CAUTION: Do Not Exceed 8 in ay 24 hour period - May Cause Addiction"",
+    Tooltip_CDContainerMedium = "A Prescription Pill Container with 10 15mg/500mg Codeine Pills, Suitable for severe pain relief. "CAUTION: Do Not Exceed More than 8 in any 24 hour period.",
+    Tooltip_CDContainerLarge = "A Prescription Pill Container with 10 30mg/500mg Codeine Pills, Suitable for intense pain relief. "CAUTION: Do Not Exceed More than 8 in any 24 hour period.",
     
 
     Tooltip_BNZO_Small = "Take 1 tablet (2mg) by mouth as needed for anxiety, muscle spasms, or seizures, or as directed by your doctor."
@@ -16,7 +19,8 @@ Tooltip_EN = {
     Tooltip_BNZO_MediumContainer = "Contains 10 Diazepam 5mg: For anxiety relief; avoid alcohol and consult your doctor before combining with other medications, Do not exceed 5 tablets in any 24 hour period"
     Tooltip_BNZO_LargeContainer = "Contains 10 Diazepam 10mg: For anxiety relief; avoid alcohol and consult your doctor before combining with other medications, Do not exceed 3 tablets in any 24 hour period"
 
-    Tooltip_Naloxone = "The Reversal Agent for Opiate Overdose" 
+    Tooltip_NaloxoneIM = "Dose: 0.4 mg intramuscularly (IM) every 2–3 minutes as needed; Place Casualty in the Recovery Position and Dial 911.",
+    Tooltip_NaloxoneIN = "Dose 
     Tooltip_Recipe_CodeineBottle8MG = "This is a descriptio of my recipe"
 
 }
