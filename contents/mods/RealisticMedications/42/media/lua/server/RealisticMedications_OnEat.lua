@@ -10,37 +10,65 @@ function CodeineConsumptionFunc(item, character, amount)
     local player_stats = player:getStats() -- Get the Players Statistics to enable them to be manipulated later
     local player_bd = player:getBodyDamage() -- Get the players body damage to enable them to be manipulated later
     local player_bh = player_bd:getOverallBodyHealth() -- Obtains the players overall body health to enable it to be manipulated later
+    local DrugSnapShot = mdata.player_TS -- Get the timestamp of when the player took the pills
+    local DrugEffectTime = mdata.player_EffectTime -- Get the timestamp of when the pills will take effect
+    local DrugTaken = mdata.Player_DrugTaken -- has the drug been taken?
+    
+
     
     -- This "or 0" is required because initially, the variable will be nil (non-existent) so you
     -- have to set it to a default value. Basically "true or 0" will return true, and "false or 0" will return 0.
     mdata.CodeinePillsConsumed = (mdata.CodeinePillsConsumed or 0) + 1
     mdata.PillSpeechCounter = (mdata.PillSpeechCounter or 0) + 2
+    mdata.PlayerTimeSurvived = (mdata.PlayerTimeSurvived or 0)
    
     local codeinepillsEaten = mdata.CodeinePillsConsumed -- set this once we've verified it cant be null and retrieved the value!
     local pillSpeechCounter = mdata.PillSpeechCounter
+    mdata.DrugSnapshot = DrugSnapShot
+    mdata.DrugEffectTime = DrugEffectTime
+    mdata.DrugActive = DrugTaken
+    --------------FIX REQUIRED ON DRUGTAKEN ---------------------------------------
+
+
     -- Change this to else if, because otherwise it will always return true!
     -- Also, we have to reverse the if tree, because >= 1 will ALWAYS return true, even if they've eaten 1000000 and should theoretically die!!! If else will then skip the rest of the tree and go right to "end".
     -- So you could put >= 15 at the top adn then >= 1 at the bottom, but I prefer to invert the statement, so
     -- it is LESS THAN which works just as well.
+
+    
     
     if codeinepillsEaten <= 1 then
          if pillSpeechCounter <= 1 and codeinepillsEaten == 1 then 
             player:Say("I feel a little better")
+            
+        --Printing is only for debugging purposes, remove this or comment it out when done 
             print(pillSpeechCounter)
          end
-        player_bd:setPainReduction(1500)
+         print("It Currently is "..DrugSnapShot.."the pills should take effect in"..DrugEffectTime)
+         
+        
+        
+        --time survived test print for purposes of seeing if capturing it and adding it for future side effect development
+    
+        --Printing is only for debugging purposes, remove this or comment it out when done 
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         print("Player Current Body health is "..player_bh )
     elseif codeinepillsEaten <= 5 then
           if codeinepillsEaten <=5 and pillSpeechCounter <=5 then 
             player:Say("I feel a little sick")
+            
+        --Printing is only for debugging purposes, remove this or comment it out when done 
             print(pillSpeechCounter)
           end
         player_bd:setFoodSicknessLevel(20)
+        
+        --Printing is only for debugging purposes, remove this or comment it out when done  
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
     elseif codeinepillsEaten > 5 and mdata.CodeinePillsConsumed < 8 then
         player:Say("I Feel Sick, I should Stop")
         player_bd:setFoodSicknessLevel(30)
+        
+        --Printing is only for debugging purposes, remove this or comment it out when done 
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
     elseif codeinepillsEaten <= 8 then
         print("player has consumed AT LEAST 8 pills")
@@ -48,6 +76,8 @@ function CodeineConsumptionFunc(item, character, amount)
         player_bd:setFoodSicknessLevel(50)
         player_bd:getBodyPart(BodyPartType.Torso_Lower):SetHealth(50)
     elseif codeinepillsEaten <= 12 then
+        
+        --Printing is only for debugging purposes, remove this or comment it out when done 
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         player:Say("I feel like I'm going to die")
         player_bd:setFoodSicknessLevel(75)
@@ -58,6 +88,8 @@ function CodeineConsumptionFunc(item, character, amount)
         player_bd:getBodyPart(BodyPartType.Torso_Upper):SetHealth(45)
         player_bd:getBodyPart(BodyPartType.Torso_Lower):SetHealth(45)
     elseif codeinepillsEaten <= 15 then
+        
+        --Printing is only for debugging purposes, remove this or comment it out when done 
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
         player:Say("I can't stay awake...")
         player_bd:getBodyPart(BodyPartType.Torso_Upper):SetHealth(25)
@@ -68,8 +100,7 @@ function CodeineConsumptionFunc(item, character, amount)
         --They are going to die if they continue to take the pills beyond this point if the continue their behaviour, we are trying to implore them to stop and think, alongside show the severity of their actions
         
     elseif codeinepillsEaten <= 16 then
-        player:playSound("DeathComingSoon")
-        player:playSound("bojack")
+        player:playSound("Deathiscoming1")
         player:Say("I'm sorry, I'm so sorry")
         player:Say("*Muffled Crying*") 
         
@@ -94,7 +125,8 @@ function CodeineConsumptionFunc(item, character, amount)
     elseif codeinepillsEaten <=100 then
         player:Say("I have taken "..mdata.CodeinePillsConsumed.." pills")
         print("player has consumed "..mdata.CodeinePillsConsumed.." pills")
-
+    else
+        mdata.Player_DrugTaken = false
         -- Kill the player instantly at this point 
         -- Here means they've eaten far too many. More than 15 to be exact!
         
@@ -103,6 +135,29 @@ function CodeineConsumptionFunc(item, character, amount)
     
 
 end
+---Function Requires Fixed----
+function DrugEffectTimeStamp(character)
+    local TS = getPlayer():getHoursSurvived()
+    local mdata = getPlayer():getModData()
+    local DrugTaken 
+    mdata.player_TS = TS
+    mdata.player_EffectTime = TS + 4
+    DrugTaken = mdata.Player_DrugTaken
+    print("Status of Drug Taken is "..DrugTaken.." ")
+ 
+    if mdata.DrugTaken == true then
+        print("the current time of Player_TS is "..mdata.player_TS)
+        print("")
+        print("the current time of Player_EffectTime is "..mdata.player_EffectTime)
+        if mdata.player_TS == mdata.player_EffectTime then
+            print("The pills have taken effect")
+        end
+    end
+    
+
+
+end
+
 
 ---@type Item_OnEat
 function BenzoConsumption(item, character, amount)
@@ -121,9 +176,10 @@ function BenzoConsumption(item, character, amount)
     
     end
 
-    if benzopillsEaten <=15 then
-        player:Say("Valium is Great.")
-        player_bd:setPanicReductionValue(100)
+    if benzopillsEaten <=1 then
+        
+
+        --Printing is only for debugging purposes, remove this or comment it out when done 
         print("player has consumed "..mdata.BenzoPillsConsumed.." pills")
         print("Player Current Body health is "..player_bh )
     end
@@ -184,5 +240,7 @@ function PillElimination()
         end
     end
 end
+
+Events.EveryOneMinute.Add(DrugEffectTimeStamp)
 Events.EveryTenMinutes.Add(SpeechCancellation)
 Events.EveryHours.Add(PillElimination)

@@ -7,7 +7,7 @@ module RealisticMedications{
         loop = false,
         is3D = true,
         clip {
-            file = media/sound/DeathComingSoon.ogg",
+            file = media/sound/Deathiscoming1.ogg,
             distanceMin = 1,
             distanceMax = 30,
             reverbFactor = 0.4,
@@ -15,12 +15,12 @@ module RealisticMedications{
 
         }
 
-	 sound Bojack{
+	 sound Deathiscomingsoon{
         category = object,
         loop = false,
         is3D = true,
         clip {
-            file = media/sound/bojack.ogg",
+            file = media/sound/Deathiscoming2.ogg",
             distanceMin = 1,
             distanceMax = 30,
             reverbFactor = 0.4,
