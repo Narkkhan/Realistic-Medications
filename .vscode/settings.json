@@ -1,5 +1,6 @@
 {
     "Lua.workspace.library": [
+        "${addons}/ao/module/library",
         "${addons}/umbrella/module/library",
         "${addons}/umbrella-unstable/module/library"
     ],
@@ -8,7 +9,8 @@
         "?.lua",
         "?/init.lua",
         "server/?.lua",
-        "client/?.lua"
+        "client/?.lua",
+        "shared/?.lua"
     ],
     "Lua.completion.requireSeparator": "/",
     "Lua.workspace.preloadFileSize": 800,
