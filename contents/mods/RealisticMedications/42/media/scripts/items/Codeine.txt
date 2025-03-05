@@ -19,7 +19,7 @@ module RealisticMedications {
 		Tooltip = A weak opiate painkiller mixed with acetaminophen good for small aches and pains,
 		WorldStaticModel = PillsPainkiller,
 		customEatSound = Pill_Swallowing,
-		EatTime = 240,
+		EatTime = 120,
 		tags = Pills,
 		OnEat = CodeineConsumptionFunc,
 		
@@ -45,7 +45,7 @@ module RealisticMedications {
 		WorldStaticModel = Painkillers,
 		CustomEatSound = Pill_Swallowing,
 		OnEat = CodeineConsumptionFunc,
-		EatTime = 240,
+		EatTime = 120,
 		tags = pills,
 		FatigueChange = 15,
 	}
@@ -64,9 +64,10 @@ module RealisticMedications {
 		Medical = TRUE,
 		ThirstChange = +25,
 		Tooltip = CD30MG,
+		OnEat = CodeineConsumptionFunction,
 		WorldStaticModel = Painkillers,
 		CustomEatSound = Pill_Swallowing,
-		EatTime = 150,
+		EatTime = 120,
 		tags = pills,
 	}
 
